@@ -77,8 +77,7 @@ in rec {
               else "[${toLuaObject n}] = " + (toLuaObject v))
             (filterAttrs
               (
-                _: v:
-                  (v != null) && (toLuaObject v != "{}")
+                _: v: (toLuaObject v != "{}")
               )
               args)))
         + "}"
