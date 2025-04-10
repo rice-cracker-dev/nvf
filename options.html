@@ -27,8 +27,8 @@
   </div><div class="appendix"> <div class="titlepage">  <div>   <div>    <h1 id="ch-options" class="title" >Appendix B. nvf Configuration Options   </h1>  </div> </div></div><p>Below are the module options provided by nvf, in no particular order. Most
 options will include useful comments, warnings or setup tips on how a module
 option is meant to be used as well as examples in complex cases.</p><p>An offline version of this page is bundled with nvf as a part of the manpages
-which you can access with <code class="literal">man 5 nvf</code>. Please us know if you believe any of the
-options below are missing useful examples.</p><div class="variablelist">
+which you can access with <code class="literal">man 5 nvf</code>. Please let us know if you believe any of
+the options below are missing useful examples.</p><div class="variablelist">
 <a id="nvf-options"></a>
  <dl class="variablelist">
 <dt>
@@ -120,7 +120,7 @@ package here may yield undesirable results.</p></div>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation neovim-unwrapped-0.10.4&gt;</code></p>
+<code class="literal">&lt;derivation neovim-unwrapped-0.11.0&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -2959,34 +2959,6 @@ null or string</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.autocomplete.blink-cmp.setupOpts.sources.transform_items"></a><a class="term" href="options.html#opt-vim.autocomplete.blink-cmp.setupOpts.sources.transform_items"><code class="option">vim.autocomplete.blink-cmp.setupOpts.sources.transform_items</code>
-  </a>
- </span>
-</dt>
-<dd>
-<p>Function to use when transforming the items before they’re returned
-for all providers.</p>
-
-<p><span class="emphasis"><em>Type:</em></span>
-null or (luaInline)</p>
-
-<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
-  Our default does nothing. If you want blink.cmp&#x27;s default, which
-  lowers the score for snippets, set this option to null.
-&#x27;&#x27;
-</code></pre>
-
-<p><span class="emphasis"><em>Declared by:</em></span></p>
-<table border="0" summary="Simple list" class="simplelist">
-<tr><td>
-<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/completion/blink-cmp/blink-cmp.nix" target="_top">
-&lt;nvf/modules/plugins/completion/blink-cmp/blink-cmp.nix&gt;
-</a></code>
-</td></tr>
-</table>
-</dd>
-<dt>
- <span class="term">
  <a id="opt-vim.autocomplete.blink-cmp.sourcePlugins"></a><a class="term" href="options.html#opt-vim.autocomplete.blink-cmp.sourcePlugins"><code class="option">vim.autocomplete.blink-cmp.sourcePlugins</code>
   </a>
  </span>
@@ -3037,7 +3009,7 @@ boolean</p>
 <p><code class="literal">blink-cmp</code> source plugin package.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
+null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
 </dd>
 <dt>
  <span class="term">
@@ -3088,7 +3060,7 @@ boolean</p>
 <p><code class="literal">blink-cmp</code> emoji source plugin package.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
+null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">&quot;blink-emoji-nvim&quot;</code></p>
@@ -3163,7 +3135,7 @@ boolean</p>
 <p><code class="literal">blink-cmp</code> ripgrep source plugin package.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
+null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">&quot;blink-ripgrep-nvim&quot;</code></p>
@@ -3238,7 +3210,7 @@ boolean</p>
 <p><code class="literal">blink-cmp</code> spell source plugin package.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
+null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">&quot;blink-cmp-spell&quot;</code></p>
@@ -3605,7 +3577,7 @@ mergeless list of (string or (luaInline))</p>
 <p>List of source plugins used by nvim-cmp.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
+list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">[ ]</code></p>
@@ -5608,6 +5580,204 @@ anything</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-vim.diagnostics.enable"></a><a class="term" href="options.html#opt-vim.diagnostics.enable"><code class="option">vim.diagnostics.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable diagostics module for Neovim.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.config"></a><a class="term" href="options.html#opt-vim.diagnostics.config"><code class="option">vim.diagnostics.config</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Values that will be passed to <code class="literal">vim.diagnostic.config</code> after being converted
+to a Lua table. Possible values for each key can be found in the help text
+for <code class="literal">vim.diagnostics.Opts</code>. You may find more about the diagnostics API of
+Neovim in <span class="command"><strong>:help diagnostic-api</strong></span>.</p><div class="note"><h3 class="title">Note</h3><p>This option is freeform. You may set values that are not present in nvf
+documentation, but those values will not be fully type checked. Please
+refer to the help text for <code class="literal">vim.diagnostic.Opts</code> for appropriate values.</p></div>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of ((attribute set of anything) or boolean or (luaInline))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.config.signs"></a><a class="term" href="options.html#opt-vim.diagnostics.config.signs"><code class="option">vim.diagnostics.config.signs</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Use signs for diagnostics. See <span class="command"><strong>:help diagnostic-signs</strong></span>.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+(attribute set of anything) or boolean or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  signs = {
+    text = {
+      &quot;vim.diagnostic.severity.ERROR&quot; = &quot;󰅚 &quot;;
+      &quot;vim.diagnostic.severity.WARN&quot; = &quot;󰀪 &quot;;
+    };
+  };
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.config.underline"></a><a class="term" href="options.html#opt-vim.diagnostics.config.underline"><code class="option">vim.diagnostics.config.underline</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Use underline for diagnostics.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+(attribute set of anything) or boolean or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.config.update_in_insert"></a><a class="term" href="options.html#opt-vim.diagnostics.config.update_in_insert"><code class="option">vim.diagnostics.config.update_in_insert</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Update diagnostics in Insert mode. If <code class="literal">false</code>, diagnostics will
+be updated on InsertLeave (<span class="command"><strong>:help InsertLeave</strong></span>).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.config.virtual_lines"></a><a class="term" href="options.html#opt-vim.diagnostics.config.virtual_lines"><code class="option">vim.diagnostics.config.virtual_lines</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Use virtual lines for diagnostics.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+(attribute set of anything) or boolean or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.config.virtual_text"></a><a class="term" href="options.html#opt-vim.diagnostics.config.virtual_text"><code class="option">vim.diagnostics.config.virtual_text</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Use virtual text for diagnostics. If multiple diagnostics are set for a namespace,
+one prefix per diagnostic + the last diagnostic message are shown.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+(attribute set of anything) or boolean or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">{
+  format = lib.generators.mkLuaInline &#x27;&#x27;
+    function(diagnostic)
+      return string.format(&quot;%s (%s)&quot;, diagnostic.message, diagnostic.source)
+    end
+  &#x27;&#x27;;
+}
+
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/neovim/init/diagnostics.nix" target="_top">
+&lt;nvf/modules/neovim/init/diagnostics.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-vim.diagnostics.nvim-lint.enable"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.enable"><code class="option">vim.diagnostics.nvim-lint.enable</code>
   </a>
  </span>
@@ -5623,6 +5793,315 @@ boolean</p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.lint_after_save"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.lint_after_save"><code class="option">vim.diagnostics.nvim-lint.lint_after_save</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable autocmd to lint after each save.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters"><code class="option">vim.diagnostics.nvim-lint.linters</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Linter configurations. Builtin linters will be updated and not
+replaced, but note that this is not a deep extend operation, i.e. if
+you define an <code class="literal">env</code> option, it will replace the entire <code class="literal">env</code> table
+provided by the builtin (if it exists).</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+attribute set of (submodule)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">&#x27;&#x27;
+  {
+    phpcs = {
+      args = [&quot;-q&quot; &quot;--report-json&quot; &quot;-&quot;];
+  
+      # this will replace the builtin&#x27;s env table if it exists
+      env = {
+        ENV_VAR = &quot;something&quot;;
+      };
+    };
+  }
+&#x27;&#x27;
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.append_fname"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.append_fname"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.append_fname</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Automatically add the current file name to the commands arguments. Only
+has an effect if stdin is false</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.args"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.args"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.args</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Arguments to pass</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (list of (string or (luaInline)))</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.cmd"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.cmd"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.cmd</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Command of the linter</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.cwd"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.cwd"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.cwd</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Working directory of the linter</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.env"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.env"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.env</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Environment variables to use</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (attribute set of string)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.ignore_exitcode"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.ignore_exitcode"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.ignore_exitcode</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Declares if exit code != 1 should be ignored or result in a warning.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.name"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.name"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.name</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Name of the linter</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.parser"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.parser"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.parser</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Parser function</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.stdin"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.stdin"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.stdin</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Send content via stdin.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix" target="_top">
+&lt;nvf/modules/plugins/diagnostics/nvim-lint/nvim-lint.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.diagnostics.nvim-lint.linters._name_.stream"></a><a class="term" href="options.html#opt-vim.diagnostics.nvim-lint.linters._name_.stream"><code class="option">vim.diagnostics.nvim-lint.linters.&lt;name&gt;.stream</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Result stream</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or one of “stdout”, “stderr”, “both”</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">null</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -5795,7 +6274,7 @@ attribute set of (submodule)</p>
 <p>Plugin Package.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
+null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -10028,7 +10507,7 @@ is set, Conform will run the formatter asynchronously after
 save.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-attribute set</p>
+null or (attribute set)</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">{
   lsp_format = &quot;fallback&quot;;
@@ -10055,7 +10534,7 @@ attribute set</p>
 is set, Conform will run the formatter on save.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-attribute set</p>
+null or (attribute set)</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">{
   lsp_format = &quot;fallback&quot;;
@@ -10185,6 +10664,30 @@ anything</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-vim.fzf-lua.setupOpts.fzf_bin"></a><a class="term" href="options.html#opt-vim.fzf-lua.setupOpts.fzf_bin"><code class="option">vim.fzf-lua.setupOpts.fzf_bin</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Path to fzf executable</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;\${pkgs.fzf.out}/bin/fzf&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/fzf-lua/fzf-lua.nix" target="_top">
+&lt;nvf/modules/plugins/utility/fzf-lua/fzf-lua.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-vim.fzf-lua.setupOpts.winopts.border"></a><a class="term" href="options.html#opt-vim.fzf-lua.setupOpts.winopts.border"><code class="option">vim.fzf-lua.setupOpts.winopts.border</code>
   </a>
  </span>
@@ -10289,7 +10792,7 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable git integration suite.</p><p>Enabling this option will enable the following plugins:</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p>gitsigns</p></li><li class="listitem"><p>vim-fugitive</p></li><li class="listitem"><p>git-conflict
+<p>Whether to enable git integration suite.</p><p>Enabling this option will enable the following plugins:</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p>gitsigns</p></li><li class="listitem"><p>vim-fugitive</p></li><li class="listitem"><p>git-conflict</p></li><li class="listitem"><p>gitlinker-nvim
 .</p></li></ul></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
@@ -10502,6 +11005,58 @@ anything</p>
 <tr><td>
 <code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/git/git-conflict/git-conflict.nix" target="_top">
 &lt;nvf/modules/plugins/git/git-conflict/git-conflict.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.git.gitlinker-nvim.enable"></a><a class="term" href="options.html#opt-vim.git.gitlinker-nvim.enable"><code class="option">vim.git.gitlinker-nvim.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable gitlinker-nvim.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/git/gitlinker-nvim/gitlinker-nvim.nix" target="_top">
+&lt;nvf/modules/plugins/git/gitlinker-nvim/gitlinker-nvim.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.git.gitlinker-nvim.setupOpts"></a><a class="term" href="options.html#opt-vim.git.gitlinker-nvim.setupOpts"><code class="option">vim.git.gitlinker-nvim.setupOpts</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Option table to pass into the setup function of gitlinker-nvim</p><p>You can pass in any additional options even if they’re
+not listed in the docs</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/git/gitlinker-nvim/gitlinker-nvim.nix" target="_top">
+&lt;nvf/modules/plugins/git/gitlinker-nvim/gitlinker-nvim.nix&gt;
 </a></code>
 </td></tr>
 </table>
@@ -12306,7 +12861,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation prettier-3.5.2&gt;</code></p>
+<code class="literal">&lt;derivation prettier-3.5.3&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -12327,7 +12882,7 @@ package</p>
 <p>Astro formatter to use</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-one of “biome”, “prettier”</p>
+one of “biome”, “prettier”, “prettierd”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">&quot;prettier&quot;</code></p>
@@ -13272,7 +13827,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation prettier-3.5.2&gt;</code></p>
+<code class="literal">&lt;derivation prettier-3.5.3&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -13833,7 +14388,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation dart-3.7.1&gt;</code></p>
+<code class="literal">&lt;derivation dart-3.7.2&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;[lib.getExe pkgs.jdt-language-server \&quot;-data\&quot; \&quot;~/.cache/jdtls/workspace\&quot;]&quot;</code></p>
@@ -14206,6 +14761,237 @@ package</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-vim.languages.fsharp.enable"></a><a class="term" href="options.html#opt-vim.languages.fsharp.enable"><code class="option">vim.languages.fsharp.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable F# language support.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.format.enable"></a><a class="term" href="options.html#opt-vim.languages.fsharp.format.enable"><code class="option">vim.languages.fsharp.format.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable F# formatting.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.format.package"></a><a class="term" href="options.html#opt-vim.languages.fsharp.format.package"><code class="option">vim.languages.fsharp.format.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>F# formatter package</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&lt;derivation fantomas-7.0.1&gt;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.format.type"></a><a class="term" href="options.html#opt-vim.languages.fsharp.format.type"><code class="option">vim.languages.fsharp.format.type</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>F# formatter to use</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+value “fantomas” (singular enum)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;fantomas&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.lsp.enable"></a><a class="term" href="options.html#opt-vim.languages.fsharp.lsp.enable"><code class="option">vim.languages.fsharp.lsp.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable F# LSP support.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.lsp.package"></a><a class="term" href="options.html#opt-vim.languages.fsharp.lsp.package"><code class="option">vim.languages.fsharp.lsp.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>F# LSP server package, or the command to run as a list of strings</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package or list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&lt;derivation fsautocomplete-0.77.4&gt;</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">&quot;[lib.getExe pkgs.fsautocomplete \&quot;--state-directory\&quot; \&quot;~/.cache/fsautocomplete\&quot;]&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.lsp.server"></a><a class="term" href="options.html#opt-vim.languages.fsharp.lsp.server"><code class="option">vim.languages.fsharp.lsp.server</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>F# LSP server to use</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+value “fsautocomplete” (singular enum)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;fsautocomplete&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.treesitter.enable"></a><a class="term" href="options.html#opt-vim.languages.fsharp.treesitter.enable"><code class="option">vim.languages.fsharp.treesitter.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable F# treesitter.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.fsharp.treesitter.package"></a><a class="term" href="options.html#opt-vim.languages.fsharp.treesitter.package"><code class="option">vim.languages.fsharp.treesitter.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>The fsharp treesitter package to use.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">pkgs.vimPlugins.nvim-treesitter.builtGrammars.fsharp</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/fsharp.nix" target="_top">
+&lt;nvf/modules/plugins/languages/fsharp.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-vim.languages.gleam.enable"></a><a class="term" href="options.html#opt-vim.languages.gleam.enable"><code class="option">vim.languages.gleam.enable</code>
   </a>
  </span>
@@ -14421,7 +15207,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation delve-1.24.0&gt;</code></p>
+<code class="literal">&lt;derivation delve-1.24.1&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -15366,7 +16152,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation jdt-language-server-1.44.0&gt;</code></p>
+<code class="literal">&lt;derivation jdt-language-server-1.45.0&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;[lib.getExe pkgs.jdt-language-server \&quot;-data\&quot; \&quot;~/.cache/jdtls/workspace\&quot;]&quot;</code></p>
@@ -15500,7 +16286,7 @@ the command to run as a list of strings.</p>
 null or package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation julia-1.11.3-env&gt;</code></p>
+<code class="literal">&lt;derivation julia-1.11.4-env&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -15809,6 +16595,131 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-vim.languages.lua.extraDiagnostics.enable"></a><a class="term" href="options.html#opt-vim.languages.lua.extraDiagnostics.enable"><code class="option">vim.languages.lua.extraDiagnostics.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable extra Lua diagnostics.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/lua.nix" target="_top">
+&lt;nvf/modules/plugins/languages/lua.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.lua.extraDiagnostics.types"></a><a class="term" href="options.html#opt-vim.languages.lua.extraDiagnostics.types"><code class="option">vim.languages.lua.extraDiagnostics.types</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of Lua diagnostics to enable</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of (value “luacheck” (singular enum) or (submodule))</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
+  &quot;luacheck&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/lua.nix" target="_top">
+&lt;nvf/modules/plugins/languages/lua.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.lua.format.enable"></a><a class="term" href="options.html#opt-vim.languages.lua.format.enable"><code class="option">vim.languages.lua.format.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Enable Lua formatting</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/lua.nix" target="_top">
+&lt;nvf/modules/plugins/languages/lua.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.lua.format.package"></a><a class="term" href="options.html#opt-vim.languages.lua.format.package"><code class="option">vim.languages.lua.format.package</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Lua formatter package</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+package</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&lt;derivation stylua-2.0.2&gt;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/lua.nix" target="_top">
+&lt;nvf/modules/plugins/languages/lua.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.lua.format.type"></a><a class="term" href="options.html#opt-vim.languages.lua.format.type"><code class="option">vim.languages.lua.format.type</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Lua formatter to use</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+value “stylua” (singular enum)</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;stylua&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/lua.nix" target="_top">
+&lt;nvf/modules/plugins/languages/lua.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-vim.languages.lua.lsp.enable"></a><a class="term" href="options.html#opt-vim.languages.lua.lsp.enable"><code class="option">vim.languages.lua.lsp.enable</code>
   </a>
  </span>
@@ -15847,7 +16758,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation lua-language-server-3.13.6&gt;</code></p>
+<code class="literal">&lt;derivation lua-language-server-3.13.9&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -16017,18 +16928,47 @@ anything</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.languages.markdown.extensions.render-markdown-nvim.setupOpts.auto_override_publish_diagnostics"></a><a class="term" href="options.html#opt-vim.languages.markdown.extensions.render-markdown-nvim.setupOpts.auto_override_publish_diagnostics"><code class="option">vim.languages.markdown.extensions.render-markdown-nvim.setupOpts.auto_override_publish_diagnostics</code>
+ <a id="opt-vim.languages.markdown.extraDiagnostics.enable"></a><a class="term" href="options.html#opt-vim.languages.markdown.extraDiagnostics.enable"><code class="option">vim.languages.markdown.extraDiagnostics.enable</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Automatically override the publish_diagnostics handler</p>
+<p>Whether to enable extra Markdown diagnostics.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/languages/markdown.nix" target="_top">
+&lt;nvf/modules/plugins/languages/markdown.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.languages.markdown.extraDiagnostics.types"></a><a class="term" href="options.html#opt-vim.languages.markdown.extraDiagnostics.types"><code class="option">vim.languages.markdown.extraDiagnostics.types</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>List of Markdown diagnostics to enable</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of (value “markdownlint-cli2” (singular enum) or (submodule))</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
+  &quot;markdownlint-cli2&quot;
+]
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -16079,7 +17019,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation deno-2.2.3&gt;</code></p>
+<code class="literal">&lt;derivation deno-2.2.4&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -16121,13 +17061,13 @@ list of string</p>
  </span>
 </dt>
 <dd>
-<p>Markdown formatter to use</p>
+<p>Markdown formatter to use. <code class="literal">denofmt</code> is deprecated and currently aliased to deno_fmt.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-one of “denofmt”, “prettierd”</p>
+one of “deno_fmt”, “denofmt”, “prettierd”</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&quot;denofmt&quot;</code></p>
+<code class="literal">&quot;deno_fmt&quot;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -16895,7 +17835,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation nushell-0.102.0&gt;</code></p>
+<code class="literal">&lt;derivation nushell-0.103.0&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;[(lib.getExe pkgs.nushell) \&quot;--lsp\&quot;]&quot;</code></p>
@@ -17279,7 +18219,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation ols-0-unstable-2025-02-11&gt;</code></p>
+<code class="literal">&lt;derivation ols-0-unstable-2025-03-12&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -17664,7 +18604,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation black-24.10.0&gt;</code></p>
+<code class="literal">&lt;derivation black-25.1.0&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -17739,7 +18679,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation basedpyright-1.28.1&gt;</code></p>
+<code class="literal">&lt;derivation basedpyright-1.28.2&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;[lib.getExe pkgs.jdt-language-server \&quot;-data\&quot; \&quot;~/.cache/jdtls/workspace\&quot;]&quot;</code></p>
@@ -17895,7 +18835,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation R-4.4.2-wrapper&gt;</code></p>
+<code class="literal">&lt;derivation R-4.4.3-wrapper&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -18581,7 +19521,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation rust-analyzer-2025-02-24&gt;</code></p>
+<code class="literal">&lt;derivation rust-analyzer-2025-03-24&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;[lib.getExe pkgs.jdt-language-server \&quot;-data\&quot; \&quot;~/.cache/jdtls/workspace\&quot;]&quot;</code></p>
@@ -19392,7 +20332,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation prettier-3.5.2&gt;</code></p>
+<code class="literal">&lt;derivation prettier-3.5.3&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -19986,7 +20926,7 @@ boolean</p>
 package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation prettier-3.5.2&gt;</code></p>
+<code class="literal">&lt;derivation prettier-3.5.3&gt;</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -20455,7 +21395,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation tinymist-0.13.8&gt;</code></p>
+<code class="literal">&lt;derivation tinymist-0.13.10&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">&quot;[lib.getExe pkgs.jdt-language-server \&quot;-data\&quot; \&quot;~/.cache/jdtls/workspace\&quot;]&quot;</code></p>
@@ -20764,7 +21704,7 @@ boolean</p>
 package or list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">&lt;derivation wgsl-analyzer-0.9.5&gt;</code></p>
+<code class="literal">&lt;derivation wgsl-analyzer-0.9.8&gt;</code></p>
 
 <p><span class="emphasis"><em>Example:</em></span>
 <code class="literal">[(lib.getExe pkgs.wgsl-analyzer)]</code></p>
@@ -21385,7 +22325,7 @@ null or boolean or string</p>
 <p>Plugin package.</p><p>If null, a custom load function must be provided</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
+null or null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”</p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -21551,7 +22491,7 @@ null or string or list of string</p>
 <p>Lazy-load on event</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-null or string or list of string or (submodule)</p>
+null or string or (submodule) or list of (string or (submodule))</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">null</code></p>
@@ -21815,6 +22755,33 @@ boolean</p>
 </dt>
 <dd>
 <p>Whether to enable format on save.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/lsp/module.nix" target="_top">
+&lt;nvf/modules/plugins/lsp/module.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.lsp.inlayHints.enable"></a><a class="term" href="options.html#opt-vim.lsp.inlayHints.enable"><code class="option">vim.lsp.inlayHints.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable inlay hints.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -22164,34 +23131,6 @@ one of “text”, “text_symbol”, “symbol_text”, “symbol”</p>
 <tr><td>
 <code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/lsp/lspkind/lspkind.nix" target="_top">
 &lt;nvf/modules/plugins/lsp/lspkind/lspkind.nix&gt;
-</a></code>
-</td></tr>
-</table>
-</dd>
-<dt>
- <span class="term">
- <a id="opt-vim.lsp.lsplines.enable"></a><a class="term" href="options.html#opt-vim.lsp.lsplines.enable"><code class="option">vim.lsp.lsplines.enable</code>
-  </a>
- </span>
-</dt>
-<dd>
-<p>Whether to enable diagnostics using virtual lines on top of the real line of code. [lsp_lines]
-.</p>
-
-<p><span class="emphasis"><em>Type:</em></span>
-boolean</p>
-
-<p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">false</code></p>
-
-<p><span class="emphasis"><em>Example:</em></span>
-<code class="literal">true</code></p>
-
-<p><span class="emphasis"><em>Declared by:</em></span></p>
-<table border="0" summary="Simple list" class="simplelist">
-<tr><td>
-<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/lsp/lsplines/lsplines.nix" target="_top">
-&lt;nvf/modules/plugins/lsp/lsplines/lsplines.nix&gt;
 </a></code>
 </td></tr>
 </table>
@@ -22759,7 +23698,9 @@ null or string</p>
  </span>
 </dt>
 <dd>
-<p>Whether to enable null-ls, also enabled automatically.</p>
+<p>Whether to enable null-ls, plugin to use Neovim as a language server to inject LSP diagnostics,
+code actions, and more via Lua.
+.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -22781,12 +23722,37 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.lsp.null-ls.debounce"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.debounce"><code class="option">vim.lsp.null-ls.debounce</code>
+ <a id="opt-vim.lsp.null-ls.setupOpts"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts"><code class="option">vim.lsp.null-ls.setupOpts</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Default debounce</p>
+<p>Option table to pass into the setup function of null-ls</p><p>You can pass in any additional options even if they’re
+not listed in the docs</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/lsp/null-ls/null-ls.nix" target="_top">
+&lt;nvf/modules/plugins/lsp/null-ls/null-ls.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.lsp.null-ls.setupOpts.debounce"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts.debounce"><code class="option">vim.lsp.null-ls.setupOpts.debounce</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Amount of time between the last change to a buffer and the next <code class="literal">textDocument/didChange</code> notification.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 signed integer</p>
@@ -22805,12 +23771,14 @@ signed integer</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.lsp.null-ls.debug"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.debug"><code class="option">vim.lsp.null-ls.debug</code>
+ <a id="opt-vim.lsp.null-ls.setupOpts.debug"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts.debug"><code class="option">vim.lsp.null-ls.setupOpts.debug</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Whether to enable debugging information for `null-ls.</p>
+<p>Whether to enable debugging information for null-ls.</p><p>Displays all possible log messages and writes them to the null-ls log,
+which you can view with the command <code class="literal">:NullLsLog</code>
+.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 boolean</p>
@@ -22832,12 +23800,13 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.lsp.null-ls.default_timeout"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.default_timeout"><code class="option">vim.lsp.null-ls.default_timeout</code>
+ <a id="opt-vim.lsp.null-ls.setupOpts.default_timeout"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts.default_timeout"><code class="option">vim.lsp.null-ls.setupOpts.default_timeout</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Default timeout value, in milliseconds</p>
+<p>Amount of time (in milliseconds) after which built-in sources will time out.</p><div class="note"><h3 class="title">Note</h3><p>Built-in sources can define their own timeout period and users can override
+the timeout period on a per-source basis</p></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
 signed integer</p>
@@ -22856,12 +23825,13 @@ signed integer</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.lsp.null-ls.diagnostics_format"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.diagnostics_format"><code class="option">vim.lsp.null-ls.diagnostics_format</code>
+ <a id="opt-vim.lsp.null-ls.setupOpts.diagnostics_format"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts.diagnostics_format"><code class="option">vim.lsp.null-ls.setupOpts.diagnostics_format</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>Diagnostic output format for null-ls</p>
+<p>Sets the default format used for diagnostics. null-ls will replace th
+e following special components with the relevant diagnostic information:</p><div class="itemizedlist"><ul class="itemizedlist " style="list-style-type: disc;"><li class="listitem"><p><code class="literal">#{m}</code>: message</p></li><li class="listitem"><p><code class="literal">#{s}</code>: source name (defaults to null-ls if not specified)</p></li><li class="listitem"><p><code class="literal">#{c}</code>: code (if available)</p></li></ul></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
 string</p>
@@ -22880,18 +23850,45 @@ string</p>
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.lsp.null-ls.sources"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.sources"><code class="option">vim.lsp.null-ls.sources</code>
+ <a id="opt-vim.lsp.null-ls.setupOpts.on_attach"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts.on_attach"><code class="option">vim.lsp.null-ls.setupOpts.on_attach</code>
   </a>
  </span>
 </dt>
 <dd>
-<p>null-ls sources</p>
+<p>Defines an on_attach callback to run whenever null-ls attaches to a buffer.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-attribute set of string</p>
+null or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">{
+  _type = &quot;lua-inline&quot;;
+  expr = &quot;on_attach&quot;;
+}
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/lsp/null-ls/null-ls.nix" target="_top">
+&lt;nvf/modules/plugins/lsp/null-ls/null-ls.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.lsp.null-ls.setupOpts.sources"></a><a class="term" href="options.html#opt-vim.lsp.null-ls.setupOpts.sources"><code class="option">vim.lsp.null-ls.setupOpts.sources</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Sources for null-ls to register</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or (attribute set of (luaInline))</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
-<code class="literal">{ }</code></p>
+<code class="literal">null</code></p>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -27280,6 +28277,36 @@ anything</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-vim.mini.indentscope.setupOpts.ignore_filetypes"></a><a class="term" href="options.html#opt-vim.mini.indentscope.setupOpts.ignore_filetypes"><code class="option">vim.mini.indentscope.setupOpts.ignore_filetypes</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>File types to ignore for illuminate</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+list of string</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
+  &quot;help&quot;
+  &quot;neo-tree&quot;
+  &quot;notify&quot;
+  &quot;NvimTree&quot;
+  &quot;TelescopePrompt&quot;
+]
+</code></pre>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/mini/indentscope/indentscope.nix" target="_top">
+&lt;nvf/modules/plugins/mini/indentscope/indentscope.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-vim.mini.jump.enable"></a><a class="term" href="options.html#opt-vim.mini.jump.enable"><code class="option">vim.mini.jump.enable</code>
   </a>
  </span>
@@ -29963,7 +30990,7 @@ the wrapper during the build process.</p><p>To avoid overriding packages and dep
 are recommended to use this option or <code class="option">vim.extraPlugins</code> option.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
+list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">[ ]</code></p>
@@ -31848,7 +32875,7 @@ strings concatenated with “\n”</p>
 <p>The snippet provider packages.</p><div class="note"><h3 class="title">Note</h3><p>These are simply appended to {option} <code class="literal">vim.startPlugins</code>.</p></div>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
+list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
   &quot;friendly-snippets&quot;
@@ -32091,7 +33118,7 @@ using the <a class="link" href="options.html#opt-vim.extraPlugins"  ><code class
 option.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
-list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-lines”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
+list of (null or package or one of “aerial-nvim”, “alpha-nvim”, “base16”, “blink-cmp”, “blink-cmp-spell”, “blink-compat”, “blink-emoji-nvim”, “blink-ripgrep-nvim”, “bufdelete-nvim”, “catppuccin”, “ccc-nvim”, “cellular-automaton-nvim”, “chatgpt-nvim”, “cheatsheet-nvim”, “cinnamon-nvim”, “cmp-buffer”, “cmp-luasnip”, “cmp-nvim-lsp”, “cmp-path”, “cmp-treesitter”, “codecompanion-nvim”, “codewindow-nvim”, “comment-nvim”, “conform-nvim”, “copilot-cmp”, “copilot-lua”, “crates-nvim”, “csharpls-extended-lsp-nvim”, “dashboard-nvim”, “diffview-nvim”, “direnv-vim”, “dracula”, “dressing-nvim”, “elixir-tools-nvim”, “fastaction-nvim”, “fidget-nvim”, “flash-nvim”, “flutter-tools-nvim”, “friendly-snippets”, “fzf-lua”, “gesture-nvim”, “git-conflict-nvim”, “github”, “gitlinker-nvim”, “gitsigns-nvim”, “glow-nvim”, “gruvbox”, “harpoon”, “haskell-tools-nvim”, “highlight-undo-nvim”, “hop-nvim”, “hydra-nvim”, “icon-picker-nvim”, “image-nvim”, “indent-blankline-nvim”, “lazydev-nvim”, “leap-nvim”, “leetcode-nvim”, “lsp-signature-nvim”, “lspkind-nvim”, “lspsaga-nvim”, “lua-utils-nvim”, “lualine-nvim”, “luasnip”, “lz-n”, “lzn-auto-require”, “mind-nvim”, “mini-ai”, “mini-align”, “mini-animate”, “mini-base16”, “mini-basics”, “mini-bracketed”, “mini-bufremove”, “mini-clue”, “mini-colors”, “mini-comment”, “mini-completion”, “mini-diff”, “mini-doc”, “mini-extra”, “mini-files”, “mini-fuzzy”, “mini-git”, “mini-hipatterns”, “mini-hues”, “mini-icons”, “mini-indentscope”, “mini-jump”, “mini-jump2d”, “mini-map”, “mini-misc”, “mini-move”, “mini-notify”, “mini-operators”, “mini-pairs”, “mini-pick”, “mini-sessions”, “mini-snippets”, “mini-splitjoin”, “mini-starter”, “mini-statusline”, “mini-surround”, “mini-tabline”, “mini-test”, “mini-trailspace”, “mini-visits”, “minimap-vim”, “mkdir-nvim”, “modes-nvim”, “multicursors-nvim”, “neo-tree-nvim”, “neocord”, “neorg”, “neorg-telescope”, “neovim-session-manager”, “new-file-template-nvim”, “nix-develop-nvim”, “noice-nvim”, “none-ls-nvim”, “nord”, “nui-nvim”, “nvim-autopairs”, “nvim-bufferline-lua”, “nvim-cmp”, “nvim-colorizer-lua”, “nvim-cursorline”, “nvim-dap”, “nvim-dap-go”, “nvim-dap-ui”, “nvim-docs-view”, “nvim-lightbulb”, “nvim-lint”, “nvim-lspconfig”, “nvim-metals”, “nvim-navbuddy”, “nvim-navic”, “nvim-neoclip-lua”, “nvim-nio”, “nvim-notify”, “nvim-scrollbar”, “nvim-surround”, “nvim-tree-lua”, “nvim-treesitter-context”, “nvim-ts-autotag”, “nvim-ufo”, “nvim-web-devicons”, “obsidian-nvim”, “oil-nvim”, “omnisharp-extended-lsp-nvim”, “onedark”, “orgmode”, “otter-nvim”, “oxocarbon”, “pathlib-nvim”, “plenary-nvim”, “precognition-nvim”, “project-nvim”, “promise-async”, “rainbow-delimiters-nvim”, “registers-nvim”, “render-markdown-nvim”, “rose-pine”, “rtp-nvim”, “run-nvim”, “rustaceanvim”, “smartcolumn-nvim”, “snacks-nvim”, “sqls-nvim”, “tabular”, “telescope”, “tiny-devicons-auto-colors-nvim”, “todo-comments-nvim”, “toggleterm-nvim”, “tokyonight”, “trouble”, “ts-error-translator-nvim”, “typst-preview-nvim”, “vim-dirtytalk”, “vim-fugitive”, “vim-illuminate”, “vim-markdown”, “vim-repeat”, “vim-startify”, “which-key-nvim”, “yanky-nvim”, “nvim-treesitter”, “flutter-tools-patched”, “vim-repeat”)</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
   &quot;plenary-nvim&quot;
@@ -32284,35 +33311,26 @@ list of string</p>
     {
       -- Lsp server name
       function()
-        local buf_ft = vim.api.nvim_get_option_value(&#x27;filetype&#x27;, {})
+        local buf_ft = vim.bo.filetype
+        local excluded_buf_ft = { toggleterm = true, NvimTree = true, [&quot;neo-tree&quot;] = true, TelescopePrompt = true }
     
-        -- List of buffer types to exclude
-        local excluded_buf_ft = {&quot;toggleterm&quot;, &quot;NvimTree&quot;, &quot;neo-tree&quot;, &quot;TelescopePrompt&quot;}
-    
-        -- Check if the current buffer type is in the excluded list
-        for _, excluded_type in ipairs(excluded_buf_ft) do
-          if buf_ft == excluded_type then
-            return &quot;&quot;
+        if excluded_buf_ft[buf_ft] then
+          return &quot;&quot;
           end
+    
+        local bufnr = vim.api.nvim_get_current_buf()
+        local clients = vim.lsp.get_clients({ bufnr = bufnr })
+    
+        if vim.tbl_isempty(clients) then
+          return &quot;No Active LSP&quot;
         end
     
-        -- Get the name of the LSP server active in the current buffer
-        local clients = vim.lsp.get_active_clients()
-        local msg = &#x27;No Active Lsp&#x27;
-    
-        -- if no lsp client is attached then return the msg
-        if next(clients) == nil then
-          return msg
-        end
-    
+        local active_clients = {}
         for _, client in ipairs(clients) do
-          local filetypes = client.config.filetypes
-          if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-            return client.name
-          end
+          table.insert(active_clients, client.name)
         end
     
-        return msg
+        return table.concat(active_clients, &quot;, &quot;)
       end,
       icon = &#x27; &#x27;,
       separator = {left = &#x27;&#x27;},
@@ -34302,6 +35320,12 @@ list of (attribute set)</p>
     separator = true;
     text = &quot;File Explorer&quot;;
   }
+  {
+    filetype = &quot;neo-tree&quot;;
+    highlight = &quot;Directory&quot;;
+    separator = true;
+    text = &quot;File Explorer&quot;;
+  }
 ]
 </code></pre>
 
@@ -35244,7 +36268,7 @@ list of string</p>
 
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
   &quot;node_modules&quot;
-  &quot;.git/&quot;
+  &quot;%.git/&quot;
   &quot;dist/&quot;
   &quot;build/&quot;
   &quot;target/&quot;
@@ -35495,32 +36519,6 @@ list of (one of “hidden”, “tail”, “absolute”, “smart”, “shorte
 </dd>
 <dt>
  <span class="term">
- <a id="opt-vim.telescope.setupOpts.defaults.pickers.find_command"></a><a class="term" href="options.html#opt-vim.telescope.setupOpts.defaults.pickers.find_command"><code class="option">vim.telescope.setupOpts.defaults.pickers.find_command</code>
-  </a>
- </span>
-</dt>
-<dd>
-<p>cmd to use for finding files</p>
-
-<p><span class="emphasis"><em>Type:</em></span>
-(list of string) or (luaInline)</p>
-
-<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
-  &quot;\${pkgs.fd}/bin/fd&quot;
-]
-</code></pre>
-
-<p><span class="emphasis"><em>Declared by:</em></span></p>
-<table border="0" summary="Simple list" class="simplelist">
-<tr><td>
-<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/telescope/telescope.nix" target="_top">
-&lt;nvf/modules/plugins/utility/telescope/telescope.nix&gt;
-</a></code>
-</td></tr>
-</table>
-</dd>
-<dt>
- <span class="term">
  <a id="opt-vim.telescope.setupOpts.defaults.prompt_prefix"></a><a class="term" href="options.html#opt-vim.telescope.setupOpts.defaults.prompt_prefix"><code class="option">vim.telescope.setupOpts.defaults.prompt_prefix</code>
   </a>
  </span>
@@ -35690,6 +36688,33 @@ signed integer</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">0</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/telescope/telescope.nix" target="_top">
+&lt;nvf/modules/plugins/utility/telescope/telescope.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.telescope.setupOpts.pickers.find_files.find_command"></a><a class="term" href="options.html#opt-vim.telescope.setupOpts.pickers.find_files.find_command"><code class="option">vim.telescope.setupOpts.pickers.find_files.find_command</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>cmd to use for finding files</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+(list of string) or (luaInline)</p>
+
+<p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
+  &quot;\${pkgs.fd}/bin/fd&quot;
+  &quot;--type=file&quot;
+]
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -36822,15 +37847,23 @@ boolean</p>
  </span>
 </dt>
 <dd>
-<p>List of treesitter grammars to install.</p><p>For languages already supported by nvf, you may
-use the <code class="option">vim.language.&lt;lang&gt;.treesitter</code> options, which
-will automatically add the required grammars to this.</p>
+<p>List of treesitter grammars to install. For grammars to be installed properly,
+you must use grammars from <code class="literal">pkgs.vimPlugins.nvim-treesitter.builtGrammars</code>.</p><p>For languages already supported by nvf, you may use
+<code class="option">vim.language.&lt;lang&gt;.treesitter</code> options, which will automatically add
+the required grammars to this.</p>
 
 <p><span class="emphasis"><em>Type:</em></span>
 list of package</p>
 
 <p><span class="emphasis"><em>Default:</em></span>
 <code class="literal">[ ]</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span></p><pre><code class="programlisting">pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+  regex
+  kdl
+];
+
+</code></pre>
 
 <p><span class="emphasis"><em>Declared by:</em></span></p>
 <table border="0" summary="Simple list" class="simplelist">
@@ -40088,6 +41121,9 @@ list of string</p>
 <p><span class="emphasis"><em>Default:</em></span></p><pre><code class="programlisting">[
   &quot;dirvish&quot;
   &quot;fugitive&quot;
+  &quot;help&quot;
+  &quot;neo-tree&quot;
+  &quot;notify&quot;
   &quot;NvimTree&quot;
   &quot;TelescopePrompt&quot;
 ]
@@ -42213,6 +43249,178 @@ boolean</p>
 </dd>
 <dt>
  <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.enable"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.enable"><code class="option">vim.utility.motion.flash-nvim.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable enhanced code navigation with flash.nvim.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.mappings.jump"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.mappings.jump"><code class="option">vim.utility.motion.flash-nvim.mappings.jump</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Jump</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;s&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.mappings.remote"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.mappings.remote"><code class="option">vim.utility.motion.flash-nvim.mappings.remote</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Remote Flash</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;r&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.mappings.toggle"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.mappings.toggle"><code class="option">vim.utility.motion.flash-nvim.mappings.toggle</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Toggle Flash Search</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;&lt;c-s&gt;&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.mappings.treesitter"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.mappings.treesitter"><code class="option">vim.utility.motion.flash-nvim.mappings.treesitter</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Treesitter</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;S&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.mappings.treesitter_search"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.mappings.treesitter_search"><code class="option">vim.utility.motion.flash-nvim.mappings.treesitter_search</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Treesitter Search</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+null or string</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">&quot;R&quot;</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.motion.flash-nvim.setupOpts"></a><a class="term" href="options.html#opt-vim.utility.motion.flash-nvim.setupOpts"><code class="option">vim.utility.motion.flash-nvim.setupOpts</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Option table to pass into the setup function of flash-nvim</p><p>You can pass in any additional options even if they’re
+not listed in the docs</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/motion/flash/flash.nix" target="_top">
+&lt;nvf/modules/plugins/utility/motion/flash/flash.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
  <a id="opt-vim.utility.motion.hop.enable"></a><a class="term" href="options.html#opt-vim.utility.motion.hop.enable"><code class="option">vim.utility.motion.hop.enable</code>
   </a>
  </span>
@@ -43364,6 +44572,59 @@ boolean</p>
 <tr><td>
 <code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/nix-develop/nix-develop.nix" target="_top">
 &lt;nvf/modules/plugins/utility/nix-develop/nix-develop.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.oil-nvim.enable"></a><a class="term" href="options.html#opt-vim.utility.oil-nvim.enable"><code class="option">vim.utility.oil-nvim.enable</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Whether to enable Neovim file explorer: edit your filesystem like a buffer [oil-nvim]
+.</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+boolean</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">false</code></p>
+
+<p><span class="emphasis"><em>Example:</em></span>
+<code class="literal">true</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/oil-nvim/oil-nvim.nix" target="_top">
+&lt;nvf/modules/plugins/utility/oil-nvim/oil-nvim.nix&gt;
+</a></code>
+</td></tr>
+</table>
+</dd>
+<dt>
+ <span class="term">
+ <a id="opt-vim.utility.oil-nvim.setupOpts"></a><a class="term" href="options.html#opt-vim.utility.oil-nvim.setupOpts"><code class="option">vim.utility.oil-nvim.setupOpts</code>
+  </a>
+ </span>
+</dt>
+<dd>
+<p>Option table to pass into the setup function of oil-nvim</p><p>You can pass in any additional options even if they’re
+not listed in the docs</p>
+
+<p><span class="emphasis"><em>Type:</em></span>
+anything</p>
+
+<p><span class="emphasis"><em>Default:</em></span>
+<code class="literal">{ }</code></p>
+
+<p><span class="emphasis"><em>Declared by:</em></span></p>
+<table border="0" summary="Simple list" class="simplelist">
+<tr><td>
+<code class="filename"><a class="filename"  href="https://github.com/NotAShelf/nvf/blob/main/modules/plugins/utility/oil-nvim/oil-nvim.nix" target="_top">
+&lt;nvf/modules/plugins/utility/oil-nvim/oil-nvim.nix&gt;
 </a></code>
 </td></tr>
 </table>
@@ -47516,12 +48777,12 @@ list of string</p>
   &quot;prompt&quot;
   &quot;TelescopePrompt&quot;
   &quot;noice&quot;
-  &quot;noice&quot;
   &quot;NvimTree&quot;
   &quot;neo-tree&quot;
   &quot;alpha&quot;
   &quot;notify&quot;
   &quot;Navbuddy&quot;
+  &quot;fastaction_popup&quot;
 ]
 </code></pre>
 
